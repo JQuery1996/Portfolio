@@ -1,8 +1,33 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+import Layout from "../components/layouts/main";
+import type { AppProps } from "next/app";
+import theme from "../lib/theme";
+import Fonts from "../components/fonts";
+import { AnimatePresence } from "framer-motion";
+import { IoLogoWindows } from "react-icons/io5";
+
+if (typeof window !== "undefined") {
+    window.history.scrollRestoration = "manual";
 }
 
-export default MyApp
+export default function Website({ Component, pageProps, router }: AppProps) {
+    return (
+        <ChakraProvider theme={theme}>
+            <Fonts />
+            <Layout router={router}>
+                <AnimatePresence
+                    exitBeforeEnter
+                    initial={true}
+                    onExitComplete={() => {
+                        if (typeof window !== "undefined") {
+                            window.scrollTo({ top: 0 });
+                        }
+                    }}
+                >
+                    <Component {...pageProps} key={router.route} />
+                </AnimatePresence>
+            </Layout>
+        </ChakraProvider>
+    );
+}
