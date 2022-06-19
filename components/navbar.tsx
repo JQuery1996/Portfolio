@@ -128,12 +128,12 @@ export const Navbar = ({
                                 <NextLink href="/posts" passHref>
                                     <MenuItem as={Link}>Posts</MenuItem>
                                 </NextLink>
-                                <MenuItem
+                                {/* <MenuItem
                                     as={Link}
                                     href="https://github.com/craftzdog/craftzdog-homepage"
                                 >
                                     View Source
-                                </MenuItem>
+                                </MenuItem> */}
                             </MenuList>
                         </Menu>
                     </Box>
