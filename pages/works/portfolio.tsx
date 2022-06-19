@@ -3,6 +3,7 @@ import {
     Badge,
     List,
     ListItem,
+    Link,
     Code,
     useColorMode,
 } from "@chakra-ui/react";
@@ -10,7 +11,7 @@ import {
 import { Title, WorkImage, Meta } from "components/work";
 import { Paragraph } from "components/paragraph";
 import Layout from "components/layouts/article";
-
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 const stackArray = ["Next.JS", "Chakra UI", "Framer Motion", "ThreeJs"];
 
 export default function Portfolio() {
@@ -28,6 +29,13 @@ export default function Portfolio() {
                 <List ml={4} my={4}>
                     <ListItem>
                         <Meta>Website</Meta>
+                        <Link
+                            href="https://portfolio-ashy-iota.vercel.app/"
+                            target="_blank"
+                        >
+                            https://portfolio-ashy-iota.vercel.app/
+                            <ExternalLinkIcon mx={2} />
+                        </Link>
                     </ListItem>
                     <ListItem>
                         <Meta>Stack</Meta>
