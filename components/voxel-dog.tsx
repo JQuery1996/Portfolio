@@ -9,11 +9,11 @@ function easeOutCirc(x: number) {
     return Math.sqrt(1 - Math.pow(x - 1, 4));
 }
 
-const VoxelDog = () => {
+export default function VoxelDog() {
     const refContainer = useRef<any>();
     const [loading, setLoading] = useState(true);
     const [renderer, setRenderer] = useState<WebGLRenderer | undefined>();
-    const [_camera, setCamera] = useState<OrthographicCamera | undefined>();
+    const [, setCamera] = useState<OrthographicCamera | undefined>();
     const [target] = useState(new THREE.Vector3(-0.5, 1.2, 0));
     const [initialCameraPosition] = useState(
         new THREE.Vector3(
@@ -23,7 +23,7 @@ const VoxelDog = () => {
         ),
     );
     const [scene] = useState(new THREE.Scene());
-    const [_controls, setControls] = useState<OrbitControls | undefined>();
+    const [, setControls] = useState<OrbitControls | undefined>();
 
     const handleWindowResize = useCallback(() => {
         const { current: container } = refContainer;
@@ -112,7 +112,7 @@ const VoxelDog = () => {
                 renderer.dispose();
             };
         }
-    }, []);
+    }, [initialCameraPosition, renderer, scene, target]);
 
     useEffect(() => {
         window.addEventListener("resize", handleWindowResize, false);
@@ -126,6 +126,4 @@ const VoxelDog = () => {
             {loading && <DogSpinner />}
         </DogContainer>
     );
-};
-
-export default VoxelDog;
+}

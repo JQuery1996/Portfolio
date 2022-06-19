@@ -8,7 +8,7 @@ import {
     useColorMode,
 } from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
-import { Title, WorkImage, Meta } from "components/work";
+import { Title, Meta } from "components/work";
 import { Paragraph } from "components/paragraph";
 import Layout from "components/layouts/article";
 
@@ -33,7 +33,8 @@ export default function InformationSecurity() {
                             href="https://github.com/JQuery1996/Information-Security-Project"
                             target="_blank"
                         >
-                            https://github.com/JQuery1996/Information-Security-Project
+                            https://github.com/JQuery1996/Information-Security-Project{" "}
+                            <ExternalLinkIcon mx="2px" />
                         </Link>
                     </ListItem>
                     <ListItem>
@@ -51,11 +52,12 @@ export default function InformationSecurity() {
                                             : "#ff63c3"
                                     }
                                     variant="outline"
-                                    children={e}
                                     key={e}
                                     mr="8px"
                                     fontWeight="bold"
-                                />
+                                >
+                                    {e}
+                                </Code>
                             ))}
                         </span>
                     </ListItem>

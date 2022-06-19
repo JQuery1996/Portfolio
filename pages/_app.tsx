@@ -1,11 +1,10 @@
-import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+import { ChakraProvider } from "@chakra-ui/react";
 
 import Layout from "../components/layouts/main";
 import type { AppProps } from "next/app";
 import theme from "../lib/theme";
 import Fonts from "../components/fonts";
 import { AnimatePresence } from "framer-motion";
-import { IoLogoWindows } from "react-icons/io5";
 
 if (typeof window !== "undefined") {
     window.history.scrollRestoration = "manual";

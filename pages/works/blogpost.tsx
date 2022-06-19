@@ -8,7 +8,7 @@ import {
     useColorMode,
 } from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
-import { Title, WorkImage, Meta } from "components/work";
+import { Title, Meta } from "components/work";
 import { Paragraph } from "components/paragraph";
 import Layout from "components/layouts/article";
 
@@ -23,7 +23,7 @@ export default function BlogPost() {
                 </Title>
                 <Paragraph>
                     A demo website for writing your posts and view other
-                    people's posts. people's posts.
+                    people&apos;s posts. people&apos;s posts.
                 </Paragraph>
                 <List ml={4} my={4}>
                     <ListItem>
@@ -32,7 +32,8 @@ export default function BlogPost() {
                             href="https://github.com/JQuery1996/nextjs-blog"
                             target="_blank"
                         >
-                            https://github.com/JQuery1996/nextjs-blog
+                            https://github.com/JQuery1996/nextjs-blog{" "}
+                            <ExternalLinkIcon mx="2px" />
                         </Link>
                     </ListItem>
                     <ListItem>
@@ -44,11 +45,12 @@ export default function BlogPost() {
                                         ? "#3d7aed"
                                         : "#ff63c3"
                                 }
-                                children={e}
                                 key={e}
                                 mr="8px"
                                 fontWeight="bold"
-                            />
+                            >
+                                {e}
+                            </Code>
                         ))}
                     </ListItem>
                 </List>

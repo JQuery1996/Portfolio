@@ -1,13 +1,12 @@
 import {
     Container,
     Badge,
-    Link,
     List,
     ListItem,
     Code,
     useColorMode,
 } from "@chakra-ui/react";
-import { ExternalLinkIcon } from "@chakra-ui/icons";
+// import { ExtrnalLinkIcon } from "@chakra-ui/icons";
 import { Title, WorkImage, Meta } from "components/work";
 import { Paragraph } from "components/paragraph";
 import Layout from "components/layouts/article";
@@ -41,11 +40,12 @@ export default function Portfolio() {
                                             : "#ff63c3"
                                     }
                                     variant="outline"
-                                    children={e}
                                     key={e}
                                     mr="8px"
                                     fontWeight="bold"
-                                />
+                                >
+                                    {e}
+                                </Code>
                             ))}
                         </span>
                     </ListItem>

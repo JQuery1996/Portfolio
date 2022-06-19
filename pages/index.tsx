@@ -9,7 +9,6 @@ import {
     Button,
     List,
     ListItem,
-    SimpleGrid,
     Icon,
 } from "@chakra-ui/react";
 
@@ -18,9 +17,8 @@ import { Paragraph } from "../components/paragraph";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import { BioSection, BioYear } from "../components/bio";
 import Layout from "../components/layouts/article";
-import { GridItem } from "../components/grid-item";
+
 import {
-    IoLogoTwitter,
     IoLogoGoogle,
     IoLogoGithub,
     IoLogoFacebook,

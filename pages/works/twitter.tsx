@@ -55,11 +55,11 @@ export default function Twitter() {
                                             : "#ff63c3"
                                     }
                                     variant="outline"
-                                    children={e}
+                                    
                                     key={e}
                                     mr="8px"
                                     fontWeight="bold"
-                                />
+                                >{e}</Code>
                             ))}
                         </span>
                     </ListItem>

@@ -1,13 +1,6 @@
-import {
-    Container,
-    Heading,
-    SimpleGrid,
-    Divider,
-    useTheme,
-    useColorMode,
-} from "@chakra-ui/react";
+import { Container, Heading, SimpleGrid, useColorMode } from "@chakra-ui/react";
 import { Section } from "../components/section";
-import { GridItem, WorkGridItem, GridItemStyle } from "../components/grid-item";
+import { WorkGridItem } from "../components/grid-item";
 import Layout from "../components/layouts/article";
 
 import thumbTwitter from "../public/images/works/twitter/twitter-01.png";
@@ -44,7 +37,7 @@ export default function Works() {
                         >
                             {" "}
                             A demo website for writing your posts and view other
-                            people's posts. people's posts.
+                            people&apos;s posts. people&apos;s posts.
                         </WorkGridItem>
                     </Section>
                     <Section>
